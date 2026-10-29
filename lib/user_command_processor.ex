@@ -1,18 +1,9 @@
-defmodule UserCommandProcessor do
-  @moduledoc """
-  Documentation for `UserCommandProcessor`.
-  """
+defmodule UserCommandProcessor.Application do
+  @moduledoc false
 
-  @doc """
-  Hello world.
+  use Application
 
-  ## Examples
-
-      iex> UserCommandProcessor.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def start(_type, _args) do
+    UserCommandProcessor.Supervisor.start_link()
   end
 end

@@ -19,11 +19,13 @@ defmodule UserCommandProcessor.MixProject do
     ]
   end
 
-  # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:telemetry, "~> 1.4.2"},
+      {:poison, "~> 6.0"},
+      {:onboarding_models, path: "../onboarding.mkaran.models"},
+      {:lovely_kafka_client,
+       git: "git@github.com:superology-backend/libs.lovely-kafka-client.git", branch: "latest"}
     ]
   end
 end
